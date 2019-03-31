@@ -11,6 +11,8 @@ import AVFoundation
 import Fabric
 import Crashlytics
 import Firebase
+import LeanCloud
+
 
 #if DEBUG
 import FLEX
@@ -29,6 +31,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // 对象存储
         FirebaseApp.configure()
+        configLeanCloud()
+
         
         // 清除选择时刻缓存
         CoreDB.clearSelectedIndexes()
@@ -156,3 +160,34 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension AppDelegate {
+    func configLeanCloud() {
+        LCApplication.default.set(id:  "LnxUtghn85BongIvchI5olfO-gzGzoHsz", key: "pFMJcBv8K1J4SlqQq90O2nL2")
+        LCApplication.default.logLevel = .debug
+        
+//        lcTest()
+    }
+    
+    func lcTest() {
+        let test = LCObject(className: "Test")
+        
+//        try? test.set("id", value: "1")
+//        try? test.set("words", value: "Hello World!")
+        
+        _ = test.save { result in
+            switch result {
+            case .success:
+                print("test update success")
+                break
+            case .failure(let error):
+                print("test update failed: \(error)")
+                break
+            }
+        }
+    }
+    
+    func registerSubclasses() {
+        LCRadio.register()
+        LCChannel.register()
+    }
+}

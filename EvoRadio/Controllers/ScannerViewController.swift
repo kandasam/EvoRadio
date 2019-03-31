@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import LeanCloud
+
 // 指定硬盘
 //let baseURL = URL(fileURLWithPath: "/Volumes/JQHD/", isDirectory: true)
 let baseURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
@@ -225,6 +227,26 @@ class ScannerViewController: ViewController {
             DispatchQueue.main.async {
                 self?.tableView.reloadData()
             }
+            
+            DispatchQueue.global().async {
+                radios.forEach({ (radio) in
+                    // save radio
+                    let lcRadio = LCRadio(radio: radio)
+                    lcRadio.saveIfNeed()
+                    
+                    // save channels
+                    if let channels = radio.channels {
+                        channels.forEach({ (channel) in
+                            let lcChannel = LCChannel(channel: channel)
+                            lcChannel.saveIfNeed()
+                        })
+                        
+                        
+                    }
+                    
+                })
+            }
+            
         }, onFailed: nil)
         
     }
