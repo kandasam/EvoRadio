@@ -55,7 +55,7 @@ class ScannerTableViewCell: UITableViewCell {
         moreButton.layer.cornerRadius = 10
         moreButton.layer.borderColor = UIColor.grayColorBF().cgColor
         moreButton.layer.borderWidth = 1
-        moreButton.addTarget(self, action: #selector(DownloadedTableViewCell.moreButtonPressed(_:)), for: .touchUpInside)
+//        moreButton.addTarget(self, action: #selector(moreButtonPressed(_:)), for: .touchUpInside)
         moreButton.snp.makeConstraints { (make) in
             make.size.equalTo(CGSize(width: 40, height: 20))
             make.rightMargin.equalTo(-6)

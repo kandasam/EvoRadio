@@ -47,3 +47,8 @@ target 'EvoRadio' do
   end
 
 end
+
+target 'LavaCrawler' do
+  common_pods()
+  
+end

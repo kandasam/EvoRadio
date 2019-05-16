@@ -21,8 +21,6 @@
 		6310545821B184F6006C8616 /* ObjcLevelDB.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6310545521B182DE006C8616 /* ObjcLevelDB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		631884601D78482200D7399A /* RadioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6318845F1D78482200D7399A /* RadioViewController.swift */; };
 		631BA2C921AFB73100A6D65C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 631BA2C821AFB73100A6D65C /* GoogleService-Info.plist */; };
-		63294D08224632900089AC36 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63294D07224632900089AC36 /* ScannerViewController.swift */; };
-		63294D0A224738E10089AC36 /* ScannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63294D09224738E10089AC36 /* ScannerTableViewCell.swift */; };
 		633506E01DE9D97500607693 /* Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633506DF1DE9D97500607693 /* Labels.swift */; };
 		6340022E1F6EABCE001FD26C /* ItunesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6340022D1F6EABCE001FD26C /* ItunesViewCell.swift */; };
 		634E065C1F3857AD00253E9A /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634E065B1F3857AD00253E9A /* Common.swift */; };
@@ -48,6 +46,45 @@
 		63C9A058211BBA8200B507D2 /* splash_image_default.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 63C9A057211BBA8200B507D2 /* splash_image_default.jpg */; };
 		63C9A078211C94A100B507D2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63C9A077211C94A100B507D2 /* LaunchScreen.storyboard */; };
 		63C9A07A211C965600B507D2 /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 63C9A079211C965600B507D2 /* LaunchImage.png */; };
+		63D3018D228D04E400DB6463 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D3018C228D04E400DB6463 /* AppDelegate.swift */; };
+		63D3018F228D04E400DB6463 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D3018E228D04E400DB6463 /* MainViewController.swift */; };
+		63D30192228D04E400DB6463 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63D30190228D04E400DB6463 /* Main.storyboard */; };
+		63D30194228D04E600DB6463 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63D30193228D04E600DB6463 /* Assets.xcassets */; };
+		63D30197228D04E600DB6463 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63D30195228D04E600DB6463 /* LaunchScreen.storyboard */; };
+		63D3019C228D0C7200DB6463 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E7FB4A1CC4B6C50018A532 /* API.swift */; };
+		63D301AA228D0CAF00DB6463 /* Radio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90659F171CC9B6440026539F /* Radio.swift */; };
+		63D301AB228D0CAF00DB6463 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E7FB4C1CC4BD5B0018A532 /* Channel.swift */; };
+		63D301AC228D0CAF00DB6463 /* NowChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EF43FA1F38A7F000EADC48 /* NowChannel.swift */; };
+		63D301AD228D0CAF00DB6463 /* Program.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E7FB4E1CC4C3170018A532 /* Program.swift */; };
+		63D301AE228D0CAF00DB6463 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E7FB521CC4CAF80018A532 /* Song.swift */; };
+		63D301AF228D0CAF00DB6463 /* Cover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9053D44E1CF483DB000392EF /* Cover.swift */; };
+		63D301B0228D0CAF00DB6463 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E7FB501CC4C3680018A532 /* User.swift */; };
+		63D301B1228D0CAF00DB6463 /* LoginUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4F76EA1CCD1EE90021D068 /* LoginUser.swift */; };
+		63D301B2228D0CAF00DB6463 /* DownloadItemQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9097BB2A1CFEC88A00FA5BD9 /* DownloadItemQueue.swift */; };
+		63D301B3228D0CAF00DB6463 /* LastPlaylist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9097BB301D00380800FA5BD9 /* LastPlaylist.swift */; };
+		63D301B5228D0CAF00DB6463 /* SearchSongInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6360F24A1F779C9500070C4E /* SearchSongInfo.swift */; };
+		63D301B6228D0CAF00DB6463 /* SearchedSongInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6360F24E1F77ACC600070C4E /* SearchedSongInfo.swift */; };
+		63D301B7228D0D9D00DB6463 /* CoreDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EF43FE1F38AB4600EADC48 /* CoreDB.swift */; };
+		63D301B8228D0DFE00DB6463 /* ObjcLevelDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6310545521B182DE006C8616 /* ObjcLevelDB.framework */; };
+		63D301B9228D0E4200DB6463 /* DownloadSongInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636449381DC2E53D008FC4A2 /* DownloadSongInfo.swift */; };
+		63D301BA228D0E5B00DB6463 /* MZDownloadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B2E4E61DC08A6700A2A146 /* MZDownloadModel.swift */; };
+		63D301BB228D0E6300DB6463 /* MZDownloadManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B2E4E51DC08A6700A2A146 /* MZDownloadManager.swift */; };
+		63D301BC228D0E6300DB6463 /* MZUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B2E4E71DC08A6700A2A146 /* MZUtility.swift */; };
+		63D301BD228D0E6300DB6463 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63974EB91DC4E437004D2526 /* Downloader.swift */; };
+		63D301BE228D0E8B00DB6463 /* Dates.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB79DA41CD11935006189B3 /* Dates.swift */; };
+		63D301C0228D0EC700DB6463 /* ObjcLevelDB.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6310545521B182DE006C8616 /* ObjcLevelDB.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		63D301C4228D15AF00DB6463 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D301C3228D15AE00DB6463 /* ScannerViewController.swift */; };
+		63D301C8228D18CD00DB6463 /* ScannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D301C7228D18CD00DB6463 /* ScannerTableViewCell.swift */; };
+		63D301C9228D19C400DB6463 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9054AE0F1CC3BFB400E876FF /* Colors.swift */; };
+		63D301CA228D19DF00DB6463 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E7FAFF1CC3E4E60018A532 /* Fonts.swift */; };
+		63D301CB228D1A5200DB6463 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902F6B6F1CC3C4EA00F43C2E /* Device.swift */; };
+		63D301CC228D1A9F00DB6463 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909E65A01CC0831B00B0C49B /* ViewController.swift */; };
+		63D301CE228D1B1200DB6463 /* SongListTableViewCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D301CD228D1B1200DB6463 /* SongListTableViewCellProtocol.swift */; };
+		63D301CF228D1B3500DB6463 /* SongListTableViewCellProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D301CD228D1B1200DB6463 /* SongListTableViewCellProtocol.swift */; };
+		63D301D0228D1B5900DB6463 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909E818B1CF8129500571A76 /* NotificationManager.swift */; };
+		63D301D2228D1BC500DB6463 /* Measure.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF1E7E11CCE7CA300B554A2 /* Measure.swift */; };
+		63D301D3228D1BE400DB6463 /* LCRadio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A6D621224FD7EC000C0780 /* LCRadio.swift */; };
+		63D301D4228D1BE700DB6463 /* LCChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63089B83225112BF003F3425 /* LCChannel.swift */; };
 		63E1D9392228590E00B5C85D /* CollectedSongListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E1D9382228590E00B5C85D /* CollectedSongListViewController.swift */; };
 		63EF43F11F38A1C700EADC48 /* ProgramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EF43F01F38A1C700EADC48 /* ProgramViewController.swift */; };
 		63EF43F31F38A1E600EADC48 /* AssistiveTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EF43F21F38A1E600EADC48 /* AssistiveTouch.swift */; };
@@ -117,6 +154,7 @@
 		90FB91B31D02D4C1002ECC8C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90FB91B21D02D4C1002ECC8C /* SystemConfiguration.framework */; };
 		90FB91B51D02D4E3002ECC8C /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 90FB91B41D02D4E3002ECC8C /* libstdc++.tbd */; };
 		90FB91B71D02D503002ECC8C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90FB91B61D02D503002ECC8C /* CoreGraphics.framework */; };
+		A0759492164292DDF293F129 /* Pods_LavaCrawler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2342D87EE52BA967312152 /* Pods_LavaCrawler.framework */; };
 		DB4F76EB1CCD1EE90021D068 /* LoginUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4F76EA1CCD1EE90021D068 /* LoginUser.swift */; };
 		DBB79DA51CD11935006189B3 /* Dates.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB79DA41CD11935006189B3 /* Dates.swift */; };
 		DBDC7F481CD90A8D0093812C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDC7F471CD90A8D0093812C /* Constants.swift */; };
@@ -153,6 +191,17 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		63D301C1228D0EC800DB6463 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				63D301C0228D0EC700DB6463 /* ObjcLevelDB.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -174,8 +223,6 @@
 		6310545521B182DE006C8616 /* ObjcLevelDB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ObjcLevelDB.framework; sourceTree = "<group>"; };
 		6318845F1D78482200D7399A /* RadioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RadioViewController.swift; path = Controllers/RadioViewController.swift; sourceTree = "<group>"; };
 		631BA2C821AFB73100A6D65C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		63294D07224632900089AC36 /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ScannerViewController.swift; path = Controllers/ScannerViewController.swift; sourceTree = "<group>"; };
-		63294D09224738E10089AC36 /* ScannerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerTableViewCell.swift; sourceTree = "<group>"; };
 		633506DF1DE9D97500607693 /* Labels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Labels.swift; sourceTree = "<group>"; };
 		6340022D1F6EABCE001FD26C /* ItunesViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItunesViewCell.swift; sourceTree = "<group>"; };
 		634002321F6F9165001FD26C /* FLEX.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FLEX.framework; path = Carthage/Build/iOS/FLEX.framework; sourceTree = "<group>"; };
@@ -211,6 +258,16 @@
 		63C9A057211BBA8200B507D2 /* splash_image_default.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = splash_image_default.jpg; sourceTree = "<group>"; };
 		63C9A077211C94A100B507D2 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63C9A079211C965600B507D2 /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage.png; sourceTree = "<group>"; };
+		63D3018A228D04E400DB6463 /* LavaCrawler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LavaCrawler.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		63D3018C228D04E400DB6463 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		63D3018E228D04E400DB6463 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		63D30191228D04E400DB6463 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		63D30193228D04E600DB6463 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		63D30196228D04E600DB6463 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		63D30198228D04E600DB6463 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63D301C3228D15AE00DB6463 /* ScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
+		63D301C7228D18CD00DB6463 /* ScannerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerTableViewCell.swift; sourceTree = "<group>"; };
+		63D301CD228D1B1200DB6463 /* SongListTableViewCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListTableViewCellProtocol.swift; sourceTree = "<group>"; };
 		63DB930C1DF2B8BB0051FA2B /* sqlite.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = sqlite.playground; path = Playgrounds/sqlite.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		63E1D9382228590E00B5C85D /* CollectedSongListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectedSongListViewController.swift; path = Controllers/CollectedSongListViewController.swift; sourceTree = "<group>"; };
 		63EF43F01F38A1C700EADC48 /* ProgramViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProgramViewController.swift; path = Controllers/ProgramViewController.swift; sourceTree = "<group>"; };
@@ -244,6 +301,7 @@
 		63EF44B81F39F48200EADC48 /* DownloadedTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadedTableViewCell.swift; sourceTree = "<group>"; };
 		63EF44B91F39F48200EADC48 /* DownloadingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DownloadingTableViewCell.swift; sourceTree = "<group>"; };
 		685775D77141121C0D813D2F /* Pods-EvoRadioTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EvoRadioTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-EvoRadioTests/Pods-EvoRadioTests.release.xcconfig"; sourceTree = "<group>"; };
+		81378FDB6DBC4C0C1CD614CC /* Pods-LavaCrawler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LavaCrawler.release.xcconfig"; path = "Pods/Target Support Files/Pods-LavaCrawler/Pods-LavaCrawler.release.xcconfig"; sourceTree = "<group>"; };
 		900C72531D056439006EBE78 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		902F6B6F1CC3C4EA00F43C2E /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Device.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		902FBCCD1CBEAC020051A93B /* EvoRadio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EvoRadio.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -285,6 +343,7 @@
 		90FB91B21D02D4C1002ECC8C /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		90FB91B41D02D4E3002ECC8C /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		90FB91B61D02D503002ECC8C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		AC2342D87EE52BA967312152 /* Pods_LavaCrawler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LavaCrawler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF4F95F4E1AE88110AABC9C4 /* Pods-EvoRadio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EvoRadio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EvoRadio/Pods-EvoRadio.debug.xcconfig"; sourceTree = "<group>"; };
 		C9634F17238D29D492403C7B /* Pods_EvoRadioTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EvoRadioTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4FB490049FC834EB04AD79F /* Pods_EvoRadio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EvoRadio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -293,6 +352,7 @@
 		DBB79DA41CD11935006189B3 /* Dates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dates.swift; sourceTree = "<group>"; };
 		DBDC7F471CD90A8D0093812C /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DBF1E7E11CCE7CA300B554A2 /* Measure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Measure.swift; sourceTree = "<group>"; };
+		E690C3A36CE9CEE365C69A6D /* Pods-LavaCrawler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LavaCrawler.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LavaCrawler/Pods-LavaCrawler.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -316,6 +376,15 @@
 			files = (
 				86A783E31962C113368E80E8 /* (null) in Frameworks */,
 				FCCE5B204D768259C96DFD55 /* Pods_EvoRadioTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63D30187228D04E400DB6463 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0759492164292DDF293F129 /* Pods_LavaCrawler.framework in Frameworks */,
+				63D301B8228D0DFE00DB6463 /* ObjcLevelDB.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -372,6 +441,7 @@
 				90659F0F1CC92CA30026539F /* MediaPlayer.framework */,
 				D4FB490049FC834EB04AD79F /* Pods_EvoRadio.framework */,
 				C9634F17238D29D492403C7B /* Pods_EvoRadioTests.framework */,
+				AC2342D87EE52BA967312152 /* Pods_LavaCrawler.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -437,7 +507,7 @@
 				6360F24C1F77A5A800070C4E /* SimpleTableViewCell.swift */,
 				63EF44121F38B28200EADC48 /* LocalTableViewCell.swift */,
 				6340022D1F6EABCE001FD26C /* ItunesViewCell.swift */,
-				63294D09224738E10089AC36 /* ScannerTableViewCell.swift */,
+				63D301CD228D1B1200DB6463 /* SongListTableViewCellProtocol.swift */,
 			);
 			name = Cells;
 			path = Views/Cells;
@@ -482,6 +552,21 @@
 				63C9A057211BBA8200B507D2 /* splash_image_default.jpg */,
 			);
 			path = splash;
+			sourceTree = "<group>";
+		};
+		63D3018B228D04E400DB6463 /* LavaCrawler */ = {
+			isa = PBXGroup;
+			children = (
+				63D3018C228D04E400DB6463 /* AppDelegate.swift */,
+				63D3018E228D04E400DB6463 /* MainViewController.swift */,
+				63D301C3228D15AE00DB6463 /* ScannerViewController.swift */,
+				63D301C7228D18CD00DB6463 /* ScannerTableViewCell.swift */,
+				63D30190228D04E400DB6463 /* Main.storyboard */,
+				63D30193228D04E600DB6463 /* Assets.xcassets */,
+				63D30195228D04E600DB6463 /* LaunchScreen.storyboard */,
+				63D30198228D04E600DB6463 /* Info.plist */,
+			);
+			path = LavaCrawler;
 			sourceTree = "<group>";
 		};
 		63DB930B1DF2B88F0051FA2B /* Playgrounds */ = {
@@ -531,6 +616,7 @@
 				634E06651F3869F400253E9A /* EvoRadioTests */,
 				630BB60C222822B50088B6D7 /* EvoRadioMac */,
 				630BB61F222822B60088B6D7 /* EvoRadioMacTests */,
+				63D3018B228D04E400DB6463 /* LavaCrawler */,
 				902FBCCE1CBEAC020051A93B /* Products */,
 				5A94393BB0E9EEBD2CED84BF /* Frameworks */,
 				CF0CB102AF13C0FA91DC99B3 /* Pods */,
@@ -544,6 +630,7 @@
 				634E06641F3869F400253E9A /* EvoRadioTests.xctest */,
 				630BB60B222822B50088B6D7 /* EvoRadioMac.app */,
 				630BB61C222822B60088B6D7 /* EvoRadioMacTests.xctest */,
+				63D3018A228D04E400DB6463 /* LavaCrawler.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -603,7 +690,6 @@
 				6304E2CB1E9243D100B80494 /* SearchViewController.swift */,
 				63C9A052211BB97200B507D2 /* SplashViewController.swift */,
 				63C9A053211BB97200B507D2 /* SplashViewController.xib */,
-				63294D07224632900089AC36 /* ScannerViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -657,6 +743,7 @@
 				633506DF1DE9D97500607693 /* Labels.swift */,
 				636CEC9E1E1BEF4E009488D5 /* ScrollView.swift */,
 				630D1702211EBB1400803BC5 /* Notification.swift */,
+				902F6B6F1CC3C4EA00F43C2E /* Device.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -665,7 +752,6 @@
 			isa = PBXGroup;
 			children = (
 				9023EA001D067233004BEE96 /* Downloader */,
-				902F6B6F1CC3C4EA00F43C2E /* Device.swift */,
 				90E7FB4A1CC4B6C50018A532 /* API.swift */,
 				63EF43FE1F38AB4600EADC48 /* CoreDB.swift */,
 				DBF1E7E11CCE7CA300B554A2 /* Measure.swift */,
@@ -685,6 +771,8 @@
 				5DFCD3CC5C6FBAC2F7155651 /* Pods-EvoRadio.release.xcconfig */,
 				DB3411BED597091FE14A8A75 /* Pods-EvoRadioTests.debug.xcconfig */,
 				685775D77141121C0D813D2F /* Pods-EvoRadioTests.release.xcconfig */,
+				E690C3A36CE9CEE365C69A6D /* Pods-LavaCrawler.debug.xcconfig */,
+				81378FDB6DBC4C0C1CD614CC /* Pods-LavaCrawler.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -746,6 +834,26 @@
 			productReference = 634E06641F3869F400253E9A /* EvoRadioTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		63D30189228D04E400DB6463 /* LavaCrawler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63D3019B228D04E600DB6463 /* Build configuration list for PBXNativeTarget "LavaCrawler" */;
+			buildPhases = (
+				4391458BC8B59B00154EC861 /* [CP] Check Pods Manifest.lock */,
+				63D30186228D04E400DB6463 /* Sources */,
+				63D30187228D04E400DB6463 /* Frameworks */,
+				63D30188228D04E400DB6463 /* Resources */,
+				597999BA6FC198D09E57C758 /* [CP] Embed Pods Frameworks */,
+				63D301C1228D0EC800DB6463 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LavaCrawler;
+			productName = LavaCrawler;
+			productReference = 63D3018A228D04E400DB6463 /* LavaCrawler.app */;
+			productType = "com.apple.product-type.application";
+		};
 		902FBCCC1CBEAC020051A93B /* EvoRadio */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 902FBCDF1CBEAC020051A93B /* Build configuration list for PBXNativeTarget "EvoRadio" */;
@@ -774,7 +882,7 @@
 		902FBCC51CBEAC010051A93B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1010;
+				LastSwiftUpdateCheck = 1020;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = JQTech;
 				TargetAttributes = {
@@ -794,6 +902,11 @@
 						DevelopmentTeam = 4T9J35ZW6C;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 902FBCCC1CBEAC020051A93B;
+					};
+					63D30189228D04E400DB6463 = {
+						CreatedOnToolsVersion = 10.2.1;
+						DevelopmentTeam = 4T9J35ZW6C;
+						ProvisioningStyle = Automatic;
 					};
 					902FBCCC1CBEAC020051A93B = {
 						CreatedOnToolsVersion = 7.3;
@@ -821,6 +934,7 @@
 				634E06631F3869F400253E9A /* EvoRadioTests */,
 				630BB60A222822B50088B6D7 /* EvoRadioMac */,
 				630BB61B222822B60088B6D7 /* EvoRadioMacTests */,
+				63D30189228D04E400DB6463 /* LavaCrawler */,
 			);
 		};
 /* End PBXProject section */
@@ -846,6 +960,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63D30188228D04E400DB6463 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63D30197228D04E600DB6463 /* LaunchScreen.storyboard in Resources */,
+				63D30194228D04E600DB6463 /* Assets.xcassets in Resources */,
+				63D30192228D04E400DB6463 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -882,6 +1006,74 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4391458BC8B59B00154EC861 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LavaCrawler-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		597999BA6FC198D09E57C758 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LavaCrawler/Pods-LavaCrawler-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/FLEX/FLEX.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/LeanCloud/LeanCloud.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+				"${BUILT_PRODUCTS_DIR}/StreamingKit/StreamingKit.framework",
+				"${BUILT_PRODUCTS_DIR}/iCarousel/iCarousel.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FLEX.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LeanCloud.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/StreamingKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/iCarousel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LavaCrawler/Pods-LavaCrawler-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		630D1704211F022600803BC5 /* Fabric */ = {
@@ -1000,6 +1192,46 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		63D30186228D04E400DB6463 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63D3018F228D04E400DB6463 /* MainViewController.swift in Sources */,
+				63D301B5228D0CAF00DB6463 /* SearchSongInfo.swift in Sources */,
+				63D301CA228D19DF00DB6463 /* Fonts.swift in Sources */,
+				63D301D4228D1BE700DB6463 /* LCChannel.swift in Sources */,
+				63D301CB228D1A5200DB6463 /* Device.swift in Sources */,
+				63D301C8228D18CD00DB6463 /* ScannerTableViewCell.swift in Sources */,
+				63D301B6228D0CAF00DB6463 /* SearchedSongInfo.swift in Sources */,
+				63D301D3228D1BE400DB6463 /* LCRadio.swift in Sources */,
+				63D301AF228D0CAF00DB6463 /* Cover.swift in Sources */,
+				63D301BA228D0E5B00DB6463 /* MZDownloadModel.swift in Sources */,
+				63D301C9228D19C400DB6463 /* Colors.swift in Sources */,
+				63D301BC228D0E6300DB6463 /* MZUtility.swift in Sources */,
+				63D301BB228D0E6300DB6463 /* MZDownloadManager.swift in Sources */,
+				63D301AB228D0CAF00DB6463 /* Channel.swift in Sources */,
+				63D301D0228D1B5900DB6463 /* NotificationManager.swift in Sources */,
+				63D301BD228D0E6300DB6463 /* Downloader.swift in Sources */,
+				63D301AA228D0CAF00DB6463 /* Radio.swift in Sources */,
+				63D3019C228D0C7200DB6463 /* API.swift in Sources */,
+				63D301AE228D0CAF00DB6463 /* Song.swift in Sources */,
+				63D301CF228D1B3500DB6463 /* SongListTableViewCellProtocol.swift in Sources */,
+				63D301AD228D0CAF00DB6463 /* Program.swift in Sources */,
+				63D301BE228D0E8B00DB6463 /* Dates.swift in Sources */,
+				63D301CC228D1A9F00DB6463 /* ViewController.swift in Sources */,
+				63D301AC228D0CAF00DB6463 /* NowChannel.swift in Sources */,
+				63D301B7228D0D9D00DB6463 /* CoreDB.swift in Sources */,
+				63D301C4228D15AF00DB6463 /* ScannerViewController.swift in Sources */,
+				63D301B0228D0CAF00DB6463 /* User.swift in Sources */,
+				63D301B9228D0E4200DB6463 /* DownloadSongInfo.swift in Sources */,
+				63D301D2228D1BC500DB6463 /* Measure.swift in Sources */,
+				63D301B3228D0CAF00DB6463 /* LastPlaylist.swift in Sources */,
+				63D3018D228D04E400DB6463 /* AppDelegate.swift in Sources */,
+				63D301B2228D0CAF00DB6463 /* DownloadItemQueue.swift in Sources */,
+				63D301B1228D0CAF00DB6463 /* LoginUser.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		902FBCC91CBEAC020051A93B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1023,7 +1255,6 @@
 				634E067F1F38888400253E9A /* RadioTableViewCell.swift in Sources */,
 				9097BB2F1CFFDFEF00FA5BD9 /* Strings.swift in Sources */,
 				63EF44091F38B02200EADC48 /* NowCollectionHeaderView.swift in Sources */,
-				63294D0A224738E10089AC36 /* ScannerTableViewCell.swift in Sources */,
 				9054AE101CC3BFB400E876FF /* Colors.swift in Sources */,
 				DBB79DA51CD11935006189B3 /* Dates.swift in Sources */,
 				63A4E53C1D80384600E18FD6 /* Views.swift in Sources */,
@@ -1063,9 +1294,9 @@
 				63EF44B21F39F39600EADC48 /* DownloadedViewController.swift in Sources */,
 				630D1703211EBB1400803BC5 /* Notification.swift in Sources */,
 				63EF43F51F38A1FD00EADC48 /* ProgramCollectionViewCell.swift in Sources */,
+				63D301CE228D1B1200DB6463 /* SongListTableViewCellProtocol.swift in Sources */,
 				6360F24F1F77ACC600070C4E /* SearchedSongInfo.swift in Sources */,
 				63EF44B61F39F3CF00EADC48 /* HistorySongListViewController.swift in Sources */,
-				63294D08224632900089AC36 /* ScannerViewController.swift in Sources */,
 				63EF43FB1F38A7F000EADC48 /* NowChannel.swift in Sources */,
 				63EF441B1F38B81400EADC48 /* PlayerView.swift in Sources */,
 				636CEC9F1E1BEF4E009488D5 /* ScrollView.swift in Sources */,
@@ -1112,6 +1343,22 @@
 				630BB614222822B60088B6D7 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		63D30190228D04E400DB6463 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63D30191228D04E400DB6463 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		63D30195228D04E600DB6463 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63D30196228D04E600DB6463 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1275,7 +1522,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.songjiaqiang.EvoRadioTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EvoRadio.app/EvoRadio";
 			};
 			name = Debug;
@@ -1295,8 +1542,84 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.songjiaqiang.EvoRadioTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EvoRadio.app/EvoRadio";
+			};
+			name = Release;
+		};
+		63D30199228D04E600DB6463 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E690C3A36CE9CEE365C69A6D /* Pods-LavaCrawler.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4T9J35ZW6C;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EvoRadio/Libs/LevelDB",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = LavaCrawler/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.songjiaqiang.LavaCrawler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		63D3019A228D04E600DB6463 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81378FDB6DBC4C0C1CD614CC /* Pods-LavaCrawler.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4T9J35ZW6C;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/EvoRadio/Libs/LevelDB",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = LavaCrawler/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.songjiaqiang.LavaCrawler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -1473,6 +1796,15 @@
 			buildConfigurations = (
 				634E066C1F3869F400253E9A /* Debug */,
 				634E066D1F3869F400253E9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63D3019B228D04E600DB6463 /* Build configuration list for PBXNativeTarget "LavaCrawler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63D30199228D04E600DB6463 /* Debug */,
+				63D3019A228D04E600DB6463 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

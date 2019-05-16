@@ -8,10 +8,6 @@
 
 import UIKit
 
-protocol SongListTableViewCellDelegate {
-    func openToolPanelOfSong(_ song: Song)
-}
-
 class SongListTableViewCell: UITableViewCell {
 
     var coverImageView = UIImageView()

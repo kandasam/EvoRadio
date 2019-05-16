@@ -8,6 +8,7 @@
 
 import UIKit
 import LeanCloud
+import SnapKit
 
 // 指定硬盘
 //let baseURL = URL(fileURLWithPath: "/Volumes/JQHD/", isDirectory: true)
@@ -43,7 +44,7 @@ class ScannerViewController: ViewController {
         
         loadDataSource()
         
-        NotificationManager.shared.addDownloadASongFinishedObserver(self, action: #selector(DownloadedSongListViewController.downloadASongFinished(_:)))
+//        NotificationManager.shared.addDownloadASongFinishedObserver(self, action: #selector(downloadASongFinished(_:)))
     }
     
     override func didReceiveMemoryWarning() {
@@ -52,9 +53,6 @@ class ScannerViewController: ViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        AssistiveTouch.shared.removeTarget(nil, action: nil, for: .allTouchEvents)
-        AssistiveTouch.shared.addTarget(self, action: #selector(goBack), for: .touchUpInside)
-        AssistiveTouch.shared.updateImage(UIImage(named: "touch_back")!)
     }
     
     override func goBack() {
@@ -109,11 +107,7 @@ class ScannerViewController: ViewController {
                 }
             default:
                 break
-                
-                
             }
-            
-            
         }
     }
     
@@ -126,62 +120,62 @@ class ScannerViewController: ViewController {
             make.right.equalTo(view.snp.right)
         }
         
-        func logLabel() -> UILabel {
-            let label = UILabel()
-            label.textColor = UIColor.grayColorBF()
-            label.font = UIFont.systemFont(ofSize: 10)
-            return label
-        }
-        
-        let radioLabel = logLabel()
-        radioLabel.text = "电台："
-        consoleView.addSubview(radioLabel)
-        radioLabel.snp.makeConstraints { (make) in
-            make.height.equalTo(30)
-            make.topMargin.equalTo(0)
-            make.leftMargin.equalTo(0)
-            make.rightMargin.equalTo(0)
-        }
-        
-        let channelLabel = logLabel()
-        channelLabel.text = "频道："
-        consoleView.addSubview(channelLabel)
-        channelLabel.snp.makeConstraints { (make) in
-            make.height.equalTo(30)
-            make.top.equalTo(radioLabel.snp.bottom)
-            make.leftMargin.equalTo(0)
-            make.rightMargin.equalTo(0)
-        }
-        
-        let programLabel = logLabel()
-        programLabel.text = "歌单："
-        consoleView.addSubview(programLabel)
-        programLabel.snp.makeConstraints { (make) in
-            make.height.equalTo(30)
-            make.top.equalTo(channelLabel.snp.bottom)
-            make.leftMargin.equalTo(0)
-            make.rightMargin.equalTo(0)
-        }
-        
-        let songLabel = logLabel()
-        songLabel.text = "歌曲："
-        consoleView.addSubview(songLabel)
-        songLabel.snp.makeConstraints { (make) in
-            make.height.equalTo(30)
-            make.top.equalTo(programLabel.snp.bottom)
-            make.leftMargin.equalTo(0)
-            make.rightMargin.equalTo(0)
-        }
-        
-        let progressView = UIProgressView()
-        progressView.progress = 0
-        consoleView.addSubview(progressView)
-        progressView.snp.makeConstraints { (make) in
-            make.height.equalTo(2)
-            make.bottom.equalTo(consoleView.snp.bottom)
-            make.leftMargin.equalTo(0)
-            make.rightMargin.equalTo(0)
-        }
+//        func logLabel() -> UILabel {
+//            let label = UILabel()
+//            label.textColor = UIColor.grayColorBF()
+//            label.font = UIFont.systemFont(ofSize: 10)
+//            return label
+//        }
+//
+//        let radioLabel = logLabel()
+//        radioLabel.text = "电台："
+//        consoleView.addSubview(radioLabel)
+//        radioLabel.snp.makeConstraints { (make) in
+//            make.height.equalTo(30)
+//            make.topMargin.equalTo(0)
+//            make.leftMargin.equalTo(0)
+//            make.rightMargin.equalTo(0)
+//        }
+//
+//        let channelLabel = logLabel()
+//        channelLabel.text = "频道："
+//        consoleView.addSubview(channelLabel)
+//        channelLabel.snp.makeConstraints { (make) in
+//            make.height.equalTo(30)
+//            make.top.equalTo(radioLabel.snp.bottom)
+//            make.leftMargin.equalTo(0)
+//            make.rightMargin.equalTo(0)
+//        }
+//
+//        let programLabel = logLabel()
+//        programLabel.text = "歌单："
+//        consoleView.addSubview(programLabel)
+//        programLabel.snp.makeConstraints { (make) in
+//            make.height.equalTo(30)
+//            make.top.equalTo(channelLabel.snp.bottom)
+//            make.leftMargin.equalTo(0)
+//            make.rightMargin.equalTo(0)
+//        }
+//
+//        let songLabel = logLabel()
+//        songLabel.text = "歌曲："
+//        consoleView.addSubview(songLabel)
+//        songLabel.snp.makeConstraints { (make) in
+//            make.height.equalTo(30)
+//            make.top.equalTo(programLabel.snp.bottom)
+//            make.leftMargin.equalTo(0)
+//            make.rightMargin.equalTo(0)
+//        }
+//
+//        let progressView = UIProgressView()
+//        progressView.progress = 0
+//        consoleView.addSubview(progressView)
+//        progressView.snp.makeConstraints { (make) in
+//            make.height.equalTo(2)
+//            make.bottom.equalTo(consoleView.snp.bottom)
+//            make.leftMargin.equalTo(0)
+//            make.rightMargin.equalTo(0)
+//        }
         
     }
     
@@ -195,7 +189,7 @@ class ScannerViewController: ViewController {
         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: playerBarHeight, right: 0)
         tableView.separatorStyle = .none
         tableView.snp.makeConstraints({(make) in
-            make.top.equalTo(consoleView.snp.bottom)
+            make.top.equalTo(consoleView.snp.top)
             make.leftMargin.equalTo(0)
             make.rightMargin.equalTo(0)
             make.bottomMargin.equalTo(0)
@@ -210,7 +204,6 @@ class ScannerViewController: ViewController {
     @objc func downloadASongFinished(_ noti: Notification) {
         loadDataSource()
         
-        NotificationCenter.default.post(name: .updateDownloadCount, object: nil)
     }
     
     //MARK: - fetch data
@@ -232,13 +225,13 @@ class ScannerViewController: ViewController {
                 radios.forEach({ (radio) in
                     // save radio
                     let lcRadio = LCRadio(radio: radio)
-                    lcRadio.saveIfNeed()
+//                    lcRadio.saveIfNeed()
                     
                     // save channels
                     if let channels = radio.channels {
                         channels.forEach({ (channel) in
                             let lcChannel = LCChannel(channel: channel)
-                            lcChannel.saveIfNeed()
+//                            lcChannel.saveIfNeed()
                         })
                         
                         
@@ -341,15 +334,6 @@ extension ScannerViewController: UITableViewDelegate, UITableViewDataSource {
         itemIndex = indexPath.row
     }
     
-    func playButtonPressed(_ button: UIButton) {
-        if let songs = CoreDB.getDownloadedSongs() {
-            MusicManager.shared.clearList()
-            MusicManager.shared.appendSongsToPlaylist(songs, autoPlay: true)
-            Device.keyWindow().topMostController()!.present(PlayerViewController.mainController, animated: true, completion: nil)
-            
-        }
-    }
-    
 //    @objc func leftButtonPressed() {
 //        print("Play all downloaded musics")
 //
@@ -378,7 +362,7 @@ extension ScannerViewController: SongListTableViewCellDelegate {
         
         let alertController = UIAlertController()
         let action1 = UIAlertAction(title: "加入播放列表", style: .default, handler: { (action) in
-            MusicManager.shared.appendSongToPlaylist(song, autoPlay: false)
+            
         })
         let action2 = UIAlertAction(title: "收藏歌曲", style: .default, handler: { (action) in
             debugPrint("add to collecte")
@@ -386,11 +370,6 @@ extension ScannerViewController: SongListTableViewCellDelegate {
         let action3 = UIAlertAction(title: "删除", style: .destructive, handler: { (action) in
             debugPrint("delete music file")
             
-            CoreDB.removeSongFromDownloadedList(song)
-            self.loadDataSource()
-            self.tableView.reloadData()
-            
-            NotificationCenter.default.post(name: .updateDownloadCount, object: nil, userInfo: nil)
         })
         
         let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
