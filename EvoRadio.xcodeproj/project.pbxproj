@@ -85,6 +85,10 @@
 		63D301D2228D1BC500DB6463 /* Measure.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF1E7E11CCE7CA300B554A2 /* Measure.swift */; };
 		63D301D3228D1BE400DB6463 /* LCRadio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A6D621224FD7EC000C0780 /* LCRadio.swift */; };
 		63D301D4228D1BE700DB6463 /* LCChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63089B83225112BF003F3425 /* LCChannel.swift */; };
+		63D301D6228D519F00DB6463 /* LCProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D301D5228D519F00DB6463 /* LCProgram.swift */; };
+		63D301DA228D581500DB6463 /* LCProgram.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D301D5228D519F00DB6463 /* LCProgram.swift */; };
+		63D301DE228E5F1500DB6463 /* LCSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D301DD228E5F1400DB6463 /* LCSong.swift */; };
+		63D301DF228E6CF700DB6463 /* LCSong.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D301DD228E5F1400DB6463 /* LCSong.swift */; };
 		63E1D9392228590E00B5C85D /* CollectedSongListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E1D9382228590E00B5C85D /* CollectedSongListViewController.swift */; };
 		63EF43F11F38A1C700EADC48 /* ProgramViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EF43F01F38A1C700EADC48 /* ProgramViewController.swift */; };
 		63EF43F31F38A1E600EADC48 /* AssistiveTouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63EF43F21F38A1E600EADC48 /* AssistiveTouch.swift */; };
@@ -268,6 +272,8 @@
 		63D301C3228D15AE00DB6463 /* ScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		63D301C7228D18CD00DB6463 /* ScannerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerTableViewCell.swift; sourceTree = "<group>"; };
 		63D301CD228D1B1200DB6463 /* SongListTableViewCellProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListTableViewCellProtocol.swift; sourceTree = "<group>"; };
+		63D301D5228D519F00DB6463 /* LCProgram.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCProgram.swift; sourceTree = "<group>"; };
+		63D301DD228E5F1400DB6463 /* LCSong.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCSong.swift; sourceTree = "<group>"; };
 		63DB930C1DF2B8BB0051FA2B /* sqlite.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = sqlite.playground; path = Playgrounds/sqlite.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		63E1D9382228590E00B5C85D /* CollectedSongListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectedSongListViewController.swift; path = Controllers/CollectedSongListViewController.swift; sourceTree = "<group>"; };
 		63EF43F01F38A1C700EADC48 /* ProgramViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProgramViewController.swift; path = Controllers/ProgramViewController.swift; sourceTree = "<group>"; };
@@ -542,6 +548,8 @@
 			children = (
 				63A6D621224FD7EC000C0780 /* LCRadio.swift */,
 				63089B83225112BF003F3425 /* LCChannel.swift */,
+				63D301D5228D519F00DB6463 /* LCProgram.swift */,
+				63D301DD228E5F1400DB6463 /* LCSong.swift */,
 			);
 			path = LeanCloud;
 			sourceTree = "<group>";
@@ -1222,11 +1230,13 @@
 				63D301AC228D0CAF00DB6463 /* NowChannel.swift in Sources */,
 				63D301B7228D0D9D00DB6463 /* CoreDB.swift in Sources */,
 				63D301C4228D15AF00DB6463 /* ScannerViewController.swift in Sources */,
+				63D301DF228E6CF700DB6463 /* LCSong.swift in Sources */,
 				63D301B0228D0CAF00DB6463 /* User.swift in Sources */,
 				63D301B9228D0E4200DB6463 /* DownloadSongInfo.swift in Sources */,
 				63D301D2228D1BC500DB6463 /* Measure.swift in Sources */,
 				63D301B3228D0CAF00DB6463 /* LastPlaylist.swift in Sources */,
 				63D3018D228D04E400DB6463 /* AppDelegate.swift in Sources */,
+				63D301DA228D581500DB6463 /* LCProgram.swift in Sources */,
 				63D301B2228D0CAF00DB6463 /* DownloadItemQueue.swift in Sources */,
 				63D301B1228D0CAF00DB6463 /* LoginUser.swift in Sources */,
 			);
@@ -1292,6 +1302,7 @@
 				63EF44031F38ACC800EADC48 /* SongListTableViewCell.swift in Sources */,
 				63974EBA1DC4E437004D2526 /* Downloader.swift in Sources */,
 				63EF44B21F39F39600EADC48 /* DownloadedViewController.swift in Sources */,
+				63D301D6228D519F00DB6463 /* LCProgram.swift in Sources */,
 				630D1703211EBB1400803BC5 /* Notification.swift in Sources */,
 				63EF43F51F38A1FD00EADC48 /* ProgramCollectionViewCell.swift in Sources */,
 				63D301CE228D1B1200DB6463 /* SongListTableViewCellProtocol.swift in Sources */,
@@ -1300,6 +1311,7 @@
 				63EF43FB1F38A7F000EADC48 /* NowChannel.swift in Sources */,
 				63EF441B1F38B81400EADC48 /* PlayerView.swift in Sources */,
 				636CEC9F1E1BEF4E009488D5 /* ScrollView.swift in Sources */,
+				63D301DE228E5F1500DB6463 /* LCSong.swift in Sources */,
 				6360F24D1F77A5A800070C4E /* SimpleTableViewCell.swift in Sources */,
 				63EF44B11F39F39600EADC48 /* DownloadedSongListViewController.swift in Sources */,
 				634E066F1F38882000253E9A /* TopTabBar.swift in Sources */,
@@ -1574,7 +1586,7 @@
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = LavaCrawler/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -1613,7 +1625,7 @@
 				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = LavaCrawler/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = cn.songjiaqiang.LavaCrawler;

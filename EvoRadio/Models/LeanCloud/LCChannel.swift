@@ -41,9 +41,12 @@ class LCChannel: LCObject {
     
     let query = LCQuery(className: LCChannel.objectClassName())
     
-    func saveIfNeed() {
+    func saveIfNeed(_ completion: ((Bool) -> Void)?=nil) {
         guard let id = self.get("channel_id")?.stringValue else {
             print("Not found channel_id from \(LCChannel.objectClassName()) table.")
+            if let c = completion {
+                c(false)
+            }
             return
         }
         
@@ -51,10 +54,22 @@ class LCChannel: LCObject {
         let result = self.query.find()
         if result.isSuccess, let objects = result.objects, objects.count > 0 {
             print("Special row is exists of id \(id)")
+            if let c = completion {
+                c(false)
+            }
             return
         }
-        let _ = save()
+        
+        if let c = completion {
+            let _ = save { (result) in
+                c(result.isSuccess)
+            }
+        }else {
+            let _ = save()
+        }
     }
     
-    
+    func saveIfNeed() {
+        saveIfNeed(nil)
+    }
 }

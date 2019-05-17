@@ -56,6 +56,8 @@ extension AppDelegate {
         LCApplication.default.set(id:  "5dDL7DnX1EsrhMGa006nna2H-gzGzoHsz", key: "bvJxHMx1zB4Vrnx46xw35gRs")
         LCApplication.default.logLevel = .debug
         
+        registerSubclasses()
+        
         //        lcTest()
     }
     
@@ -80,5 +82,7 @@ extension AppDelegate {
     func registerSubclasses() {
         LCRadio.register()
         LCChannel.register()
+        LCProgram.register()
+        LCSong.register()
     }
 }

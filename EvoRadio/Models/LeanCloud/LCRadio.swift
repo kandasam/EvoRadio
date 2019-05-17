@@ -28,11 +28,15 @@ class LCRadio: LCObject {
     required init() {
         fatalError("init() has not been implemented")
     }
+    
     let query = LCQuery(className: LCRadio.objectClassName())
 
-    func saveIfNeed() {
+    func saveIfNeed(_ completion: ((Bool) -> Void)?=nil) {
         guard let id = self.get("radio_id")?.intValue else {
             print("Not found radio_id from \(LCRadio.objectClassName()) table.")
+            if let c = completion {
+                c(false)
+            }
             return
         }
         
@@ -40,8 +44,22 @@ class LCRadio: LCObject {
         let result = self.query.find()
         if result.isSuccess, let objects = result.objects, objects.count > 0 {
             print("Special row is exists of id \(id)")
+            if let c = completion {
+                c(false)
+            }
             return
         }
-        let _ = save()
+        
+        if let c = completion {
+            let _ = save { (result) in
+                c(result.isSuccess)
+            }
+        }else {
+            let _ = save()
+        }
+    }
+    
+    func saveIfNeed() {
+        saveIfNeed(nil)
     }
 }
