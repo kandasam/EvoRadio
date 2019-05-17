@@ -44,8 +44,9 @@ class MainViewController: UIViewController {
         
         loadAllChannels()
         
-//        channelIndex = 135
-//        programIndex = 0
+        channelIndex = 95
+        programIndex = 0
+        songIndex = 0
     }
     
     //MARK: - Update console
@@ -102,7 +103,7 @@ class MainViewController: UIViewController {
     }
     
     @objc func onTimer() {
-        print("indeies: \(channelIndex) \(programIndex) \(songIndex)")
+        print("indexes: \(channelIndex) \(programIndex) \(songIndex)")
         loop()
     }
     
@@ -190,16 +191,7 @@ class MainViewController: UIViewController {
                         let lcProgram = LCProgram(program: program)
                         lcProgram.saveIfNeed({ (result) in
                             print("save song task result: isSuccess:\(result)")
-                            self?.programIndex += 1
-                            if (self?.programIndex)! >= programs.count {
-                                self?.programIndex = 0
-                                self?.channelIndex += 1
-                                if (self?.channelIndex)! >= (self?.allChannels.count)! {
-                                    self?.isFinished = true
-                                    self?.isFetch = false
-                                    return
-                                }
-                            }
+                            self?.increaseProgramIndex(programCount: programs.count)
                             self?.isFetch = false
                         })
                         
@@ -220,27 +212,19 @@ class MainViewController: UIViewController {
                                         let lcSong = LCSong(song: song)
                                         lcSong.saveIfNeed({ (result) in
                                             print("save song task result: isSuccess:\(result)")
-                                            self?.songIndex += 1
-                                            if (self?.songIndex)! >= songs.count {
-                                                self?.programIndex += 1
-                                                self?.songIndex = 0
-                                                if (self?.programIndex)! >= programs.count {
-                                                    self?.channelIndex += 1
-                                                    self?.programIndex = 0
-                                                    self?.songIndex = 0
-                                                    if (self?.channelIndex)! >= (self?.allChannels.count)! {
-                                                        self?.isFinished = true
-                                                        self?.isFetch = false
-                                                        return
-                                                    }
-                                                }
-                                            }
+                                            self?.increaseSongIndex(songCount: songs.count, programCount: programs.count)
                                             self?.isFetch = false
                                         })
+                                    }else {
+                                        self?.increaseSongIndex(songCount: songs.count, programCount: programs.count)
+                                        self?.isFetch = false
                                     }
                                 }
                             })
                         }
+                    }else {
+                        self?.increaseProgramIndex(programCount: programs.count)
+                        self?.isFetch = false
                     }
                 }
             }
@@ -275,5 +259,45 @@ class MainViewController: UIViewController {
         }
     }
     
+    
+    func increaseProgramIndex(programCount: Int) {
+        programIndex += 1
+        if programIndex >= programCount {
+            programIndex = 0
+            channelIndex += 1
+            if channelIndex >= allChannels.count {
+                isFinished = true
+            }
+        }
+        
+        recordIndexes()
+    }
+    
+    func increaseSongIndex(songCount: Int, programCount: Int) {
+        songIndex += 1
+        if songIndex >= songCount {
+            programIndex += 1
+            songIndex = 0
+            if programIndex >= programCount {
+                channelIndex += 1
+                programIndex = 0
+                songIndex = 0
+                if channelIndex >= allChannels.count {
+                    isFinished = true
+                }
+            }
+        }
+        recordIndexes()
+    }
+    
+    func recordIndexes() {
+        let ud = UserDefaults.standard
+        let indexes = ["radioIndex":0,
+                       "channelIndex": channelIndex,
+                       "programIndex": programIndex,
+                       "songIndex":songIndex]
+        ud.set(indexes, forKey: "kFetchIndexes")
+        ud.synchronize()
+    }
 }
 
