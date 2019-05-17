@@ -168,9 +168,11 @@ class API {
 
     /** 根据节目单ID获取其下的所有音乐 */
     func fetch_songs(_ programId: String, isVIP: Bool,  onSuccess: @escaping ([Song]) -> Void, onFailed: ((Error) -> Void)?) {
-        var endpoint = commonEP("api/play.playProgram.json?device=iPhone%20OS%209.3.2&luid=&program_id=\(programId)")
+        var endpoint = ""
         if isVIP {
-            endpoint = commonEP("api/play.sharePlayProgram.json?device=iPhone%20OS%209.3.2&luid=&isShare=1&program_id=\(programId)")
+            endpoint = commonEP("api/play.sharePlayProgram.json?isShare=1&program_id=\(programId)")
+        }else {
+            endpoint = commonEP("api/play.playProgram.json?program_id=\(programId)")
         }
 
         // 从缓存加载
